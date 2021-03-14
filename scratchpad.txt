@@ -1,3 +1,4 @@
 height="28000" width="360" frameborder="0" scrolling="no"
 
 Installed HomeBrew and Git (I think) but VSC not recognizing GIT. Will try to reinstall.
+Successfully installed Git and logged PW. Didn't find a way to upload a new project to an existing repo, so just created a new one
