@@ -1,0 +1,78 @@
+/* Define vars for root element */
+:root {
+
+    /* Color Variables */
+    --main-bg-color: #ddd;
+    --main-bg-color-DARK: #000;
+    
+    --text-color: black;
+    --text-color-DARK: darkgray;
+
+    /* Font Variables */
+    --default-fonts: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Distance Variables */
+    --iframe-height: 30000px;
+    --phone-width-regular: 360px;
+} 
+
+.dark-theme {
+    background-color: var(--main-bg-color-DARK);
+    color: var(--text-color-DARK) ;
+}
+
+body {
+    padding: 16px;
+    margin: 0px;
+    font-family: var(--default-fonts);
+}
+
+.page-header {
+    display: flex;
+}
+
+.page-header-controls {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 6;
+    justify-content: flex-end;
+    padding: 16px 0px;
+}
+
+.page-header-controls button{
+    padding: 0px 16px;
+    margin: 0px 0px 0px 8px;
+    border: 2px solid var(--text-color-DARK);
+    background-color: var(--main-bg-color-DARK);
+    color: var(--text-color-DARK);
+    border-radius: 8px;
+}
+
+.toTop {
+    /* oncli */
+}
+
+.toBottom {
+
+}
+
+.StacksContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0px 0px 16px 0px;
+    margin: 0px;
+    overflow: scroll;
+}
+.iFrameContainer {
+    width: var(--phone-width-regular);
+    height: var(--iframe-height);
+    margin: 0px;
+    padding-right: 16px;
+
+}
+iframe {
+    height: var(--iframe-height); 
+    width: var(--phone-width-regular); 
+    border: 0px; 
+    overflow: no;
+}

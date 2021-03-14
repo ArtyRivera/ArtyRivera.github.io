@@ -1,0 +1,3 @@
+height="28000" width="360" frameborder="0" scrolling="no"
+
+Installed HomeBrew and Git (I think) but VSC not recognizing GIT. Will try to reinstall.
