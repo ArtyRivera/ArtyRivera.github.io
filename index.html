@@ -10,17 +10,21 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Pre-Body Script load-in -->
 </head>
 <body class="dark-theme">
+    <script src="scripts.js"></script>
     <header class="page-header">
         <h1>Neptune Pages MultiView</h1>
         <div class="page-header-controls">
-            <button type="button" id="ScrollToTop"><i class="material-icons md-24">vertical_align_top</i></button>
-            <button type="button" id="ScrollToBtm"><i class="material-icons md-24">vertical_align_bottom</i></button>
+            <button type="button" onclick="FnScrollTOP()" id="BtnScrollTOP" title="Go to top"><i class="material-icons md-24">vertical_align_top</i></button>
+            <!-- <button type="button" onclick="FnScrollBTM()" id="BtnScrollBTM"><i class="material-icons md-24">vertical_align_bottom</i></button> -->
         </div>
     </header>
     <ul class="StacksContainer">
         <li class="iFrameContainer">
+            <!-- <header class="column-header"><p>https://neptune.mobileposse.com/metrozone/en/0500.html</p></header> -->
             <iframe src="https://neptune.mobileposse.com/metrozone/en/0500.html"></iframe></li>    
         <li class="iFrameContainer">
             <iframe src="https://neptune.mobileposse.com/metrozone/en/0600.html"></iframe></li>    
@@ -44,7 +48,8 @@
             <iframe src="https://neptune.mobileposse.com/metrozone/en/1500.html"></iframe></li>
 
     </ul> 
-        
+    
+
     </body>
 </html>
 

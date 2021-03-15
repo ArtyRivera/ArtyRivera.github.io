@@ -81,6 +81,24 @@ button:hover{
     margin: 80px 0px 80px 16px;
     overflow: scroll;
 }
+
+.column-header
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0px;
+    background-color: var(--main-bg-color-DARK-wALPHA);
+}
+
+.column-header 
+p {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 12px;
+}
+
 .iFrameContainer {
     width: var(--phone-width-regular);
     height: var(--iframe-height);
@@ -88,6 +106,7 @@ button:hover{
     padding-right: 16px;
 
 }
+
 iframe {
     height: var(--iframe-height); 
     width: var(--phone-width-regular); 

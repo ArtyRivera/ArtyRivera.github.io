@@ -2,3 +2,10 @@ height="28000" width="360" frameborder="0" scrolling="no"
 
 Installed HomeBrew and Git (I think) but VSC not recognizing GIT. Will try to reinstall.
 Successfully installed Git and logged PW. Didn't find a way to upload a new project to an existing repo, so just created a new one
+
+window.scrollTo(xpos, ypos)
+
+From: https://javascript.info/size-and-scroll-window
+Important:
+To scroll the page with JavaScript, its DOM must be fully built.
+For instance, if we try to scroll the page with a script in <head>, it won’t work.
