@@ -122,7 +122,7 @@ button:hover{
     display: flex;
     flex-flow: row nowrap;
     padding: 0px 0px 16px 160px;
-    margin: 80px 0px 80px 0px;
+    margin: 88px 0px 80px 0px;
     overflow: scroll;
 }
 
