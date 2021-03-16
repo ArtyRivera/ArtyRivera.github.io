@@ -69,7 +69,8 @@ body {
 }
 
 .nav-presets hr {
-    color: var(--L2-surface-color-DARK)
+    border: 1px solid var(--L2-surface-color-DARK);
+    border-radius: 1px;
 }
 
 .page-header {
