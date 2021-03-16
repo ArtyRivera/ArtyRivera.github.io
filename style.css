@@ -24,7 +24,7 @@
 }
 
 body {
-    padding: 0px; 16px;
+    padding: 0px 16px;
     margin: 0px;
     font-family: var(--default-fonts);
 }
@@ -36,6 +36,7 @@ body {
     position: fixed;
     top: 88px;
     left: 0;
+    overflow: auto;
 }
 
 .nav-presets {
@@ -95,14 +96,16 @@ body {
 
 .page-header-controls 
 button{
+    height: 56px;
     padding: 12px 16px;
-    margin-left: 0px;
+    margin-left: 8px;
     border: 0px solid var(--text-color-DARK);
     background-color: var(--main-bg-color-DARK);
     color: var(--text-color-DARK);
     border-radius: 8px;
     position: relative;
     right: 32px;
+    align-items: center;
 }
 
 .page-header-controls 
@@ -110,12 +113,15 @@ button:hover{
     background-color: var(--L2-surface-color-DARK);
 }
 
-.toTop {
-    /* oncli */
-}
+#theFold {
+    display: block;
+    position: fixed;
+    left: 160px;
+    right: 0px;
+    top: 616px;
+    bottom: 0px;
 
-.toBottom {
-
+    background-color: rgba(0,0,0,0.50);
 }
 
 .PageDeck {
