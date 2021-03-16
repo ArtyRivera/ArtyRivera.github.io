@@ -20,10 +20,14 @@
     <header class="page-header">
         <h1>Neptune Pages MultiView</h1>
         <div class="page-header-controls">
-            <button type="button" onclick="FnScrollTOP()" id="BtnScrollTOP" title="Go to top"><i class="material-icons md-24">vertical_align_top</i></button>
-            <!-- <button type="button" onclick="FnScrollBTM()" id="BtnScrollBTM"><i class="material-icons md-24">vertical_align_bottom</i></button> -->
+            <button type="button" onclick="ToggleFOLD()" id="BtnToggleFOLD" title="Toggle Fold Overlay">
+                Toggle Fold Overlay</button>
+            <button type="button" onclick="FnScrollTOP()" id="BtnScrollTOP" title="Go to top">
+                <i class="material-icons md-24">vertical_align_top</i>  </button>
         </div>
     </header>
+    
+    <div id="theFold"></div>
     
     <nav class="page-nav">
         <ul class="nav-presets">
