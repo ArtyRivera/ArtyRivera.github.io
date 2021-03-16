@@ -29,6 +29,49 @@ body {
     font-family: var(--default-fonts);
 }
 
+.page-nav {
+    height: 100%;
+    width: 160px;
+    background-color: var(--main-bg-color-DARK-wALPHA);
+    position: fixed;
+    top: 88px;
+    left: 0;
+}
+
+.nav-presets {
+    list-style-type: none;
+    padding: 0px 16px;
+    margin: 0px 0px 16px;
+}
+
+.nav-presets li {
+    margin-bottom: 16px;
+}
+
+.nav-presets h6 {
+    margin-top: 0px;
+}
+
+.nav-presets a {
+    /* line-height: 16px; */
+    text-decoration: none;
+    color: var(--text-color-DARK);
+}
+
+.nav-presets a:hover {
+    /* line-height: 16px; */
+    text-decoration: underline;
+    color: white;
+}
+
+.nav-presets span {
+    font-size: .67em;
+}
+
+.nav-presets hr {
+    color: var(--L2-surface-color-DARK)
+}
+
 .page-header {
     display: flex;
     position: fixed;
@@ -74,11 +117,11 @@ button:hover{
 
 }
 
-.StacksContainer {
+.PageDeck {
     display: flex;
     flex-flow: row nowrap;
-    padding: 0px 0px 16px 0px;
-    margin: 80px 0px 80px 16px;
+    padding: 0px 0px 16px 160px;
+    margin: 80px 0px 80px 0px;
     overflow: scroll;
 }
 
