@@ -9,3 +9,147 @@ From: https://javascript.info/size-and-scroll-window
 Important:
 To scroll the page with JavaScript, its DOM must be fully built.
 For instance, if we try to scroll the page with a script in <head>, it won’t work.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neptune Pages MultiView</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Pre-Body Script load-in -->
+</head>
+<body class="dark-theme">
+    
+    <script src="scripts.js"></script>
+
+    <header class="page-header">
+        <h1>Neptune Pages MultiView</h1>
+        <div class="page-header-controls">
+            <button type="button" onclick="ToggleFOLD()" id="BtnToggleFOLD" title="Toggle Fold Overlay">
+                Toggle Fold Overlay</button>
+            <button type="button" onclick="FnScrollTOP()" id="BtnScrollTOP" title="Go to top">
+                <i class="material-icons md-24">vertical_align_top</i>  </button>
+        </div>
+    </header>
+    
+    <div id="theFold"></div>
+    
+    <nav class="page-nav">
+        <ul class="nav-presets">
+            <li><h6>Presets</h6></li>
+            <li><a href="index.html"><b>MZ Morning</b><br><span>5am-12pm</span></a></li>
+            <li><a href="index2.html">MZ Afternoon<br><span>1pm-9pm</span></a></li>
+            <li><a href="index3.html">MZ Night<br><span>10pm-4am</span></a></li>
+            <li><a href="index4.html">MZ ALL<br><span>(Performance-Heavy)</span></a></li>
+        <hr>
+            <li><a href="indexSCOOP1.html">SCOOP Morning<br><span>5am-12pm</span></a></li>
+            <li><a href="indexSCOOP2.html">SCOOP Afternoon<br><span>1pm-9pm</span></a></li>
+            <li><a href="indexSCOOP3.html">SCOOP Night<br><span>10pm-4am</span></a></li>
+            <li><a href="indexSCOOP4.html">SCOOP ALL<br><span>(Performance-Heavy)</span></a></li>
+        <hr>
+            <li><a href="indexBLU1.html">BLU Morning<br><span>5am-12pm</span></a></li>
+            <li><a href="indexBLU2.html">BLU Afternoon<br><span>1pm-9pm</span></a></li>
+            <li><a href="indexBLU3.html">BLU Night<br><span>10pm-4am</span></a></li>
+            <li><a href="indexBLU4.html">BLU ALL<br><span>(Performance-Heavy)</span></a></li>
+        <hr>
+            <li><a href="indexFN1.html">FN Morning<br><span>5am-12pm</span></a></li>
+            <li><a href="indexFN2.html">FN Afternoon<br><span>1pm-9pm</span></a></li>
+            <li><a href="indexFN3.html">FN Night<br><span>10pm-4am</span></a></li>
+            <li><a href="indexFN4.html">FN ALL<br><span>(Performance-Heavy)</span></a></li>
+        </ul>
+    </nav>
+    
+    <ul class="PageDeck">
+
+        <!-- IFRAMES -->
+        <li class="iFrameContainer">
+            <header class="columnTop dropdown">
+                <button class="dropBtn">
+                    <!-- <input type="text" id="fname" name="fname"> -->
+                    <span>Reset iFrame</span>
+                    <i class="material-icons md-24">arrow_drop_down</i>
+                </button>
+                <ul class="dropdown-content">
+                    <li onclick="ResetiFrame_To()"> <!-- THIS IS WHERE THE IFRAME RESET FUNCTION IS CALLED -->
+                        PROD Content Pages Main List
+                    </li>
+                    <li href="#">SANDBOX Content Pages Main List</li>
+                </ul>
+            </header>
+            <iframe id="iPage1" src="https://neptune.mobileposse.com/metrozone/en/0500.html"></iframe>
+        </li>   
+         
+        <li class="iFrameContainer">
+            <header class="columnTop dropdown">
+                <button class="dropBtn">
+                    <!-- <input type="text" id="fname" name="fname"> -->
+                    <span>Reset iFrame</span>
+                    <i class="material-icons md-24">arrow_drop_down</i>
+                </button>
+                <ul class="dropdown-content"> <!-- THIS IS WHERE THE IFRAME RESET FUNCTION IS CALLED -->
+                    <li onclick="ResetiFrame_To('iPage2', '"https://sandbox.mobileposse.com/"')">
+                        PROD Content Pages Main List
+                    </li>
+                    <li href="#">SANDBOX Content Pages Main List</li>
+                </ul>
+            </header>
+            <iframe id="iPage2" src="https://neptune.mobileposse.com/metrozone/en/0600.html"></iframe>
+        </li>    
+        <!-- <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/0700.html"></iframe></li>    
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/0800.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/0900.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/1000.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/1100.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/1200.html"></iframe></li>
+        <!-- <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/1300.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/1400.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/1500.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/1600.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/1700.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/1800.html"></iframe></li>    
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/1900.html"></iframe></li>    
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/2000.html"></iframe></li>    
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/2100.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/2200.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/2300.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/2400.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/0100.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/0200.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/0300.html"></iframe></li>
+        <li class="iFrameContainer">
+            <iframe src="https://neptune.mobileposse.com/metrozone/en/0400.html"></iframe></li> -->
+
+    </ul> 
+    
+
+    </body>
+</html>
+

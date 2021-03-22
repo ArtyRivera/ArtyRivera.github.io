@@ -28,3 +28,16 @@ function ToggleFOLD() {
   }
     
 }
+
+// const iFtarget = document.getElementById("iPage2")
+
+// When function called, reset local targetiFrame to targetURL
+
+function ResetiFrame_To(targetiFrame,targetURL) {
+
+  targetiFrame.src = targetURL;
+
+  // const iFrameWindow = iFtarget.contentWindow;
+  // console.log(iFrameWindow);
+
+}

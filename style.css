@@ -6,6 +6,8 @@
     --main-bg-color-DARK: #000;
     --main-bg-color-DARK-wALPHA: rgba(0,0,0,0.95);
     --L2-surface-color-DARK: #222;
+    --L2-hover-color-DARK: #333;
+    --L2-SUBsurace-color-DARK: #111;
     
     --text-color: black;
     --text-color-DARK: darkgray;
@@ -45,31 +47,37 @@ body {
     margin: 0px 0px 16px;
 }
 
-.nav-presets li {
+.nav-presets 
+li {
     margin-bottom: 16px;
 }
 
-.nav-presets h6 {
+.nav-presets 
+h6 {
     margin-top: 0px;
 }
 
-.nav-presets a {
+.nav-presets 
+a {
     /* line-height: 16px; */
     text-decoration: none;
     color: var(--text-color-DARK);
 }
 
-.nav-presets a:hover {
+.nav-presets 
+a:hover {
     /* line-height: 16px; */
     text-decoration: underline;
     color: white;
 }
 
-.nav-presets span {
+.nav-presets 
+span {
     font-size: .67em;
 }
 
-.nav-presets hr {
+.nav-presets 
+hr {
     border: 1px solid var(--L2-surface-color-DARK);
     border-radius: 1px;
 }
@@ -130,23 +138,7 @@ button:hover{
     padding: 0px 0px 16px 160px;
     margin: 88px 0px 80px 0px;
     overflow: scroll;
-}
-
-.column-header
-header {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0px;
-    background-color: var(--main-bg-color-DARK-wALPHA);
-}
-
-.column-header 
-p {
-    text-align: center;
-    font-weight: lighter;
-    font-size: 12px;
+    list-style-type: none;
 }
 
 .iFrameContainer {
@@ -154,12 +146,95 @@ p {
     height: var(--iframe-height);
     margin: 0px;
     padding-right: 16px;
-
 }
+
+.iFrameContainer 
+ul {
+    list-style-type: none;
+}
+
+.columnTop {
+    display: flex;
+    top: 0;
+    left: 0;
+    padding: 0px;
+    background-color: var(--main-bg-color-DARK-wALPHA);
+    position: relative;
+    justify-content: center;
+}
+
+.columnTop
+button {
+    height: 32px;
+    padding: 4px 8px;
+    margin: 0px 0px 8px 0px;
+    border: 0px solid var(--text-color-DARK);
+    background-color: var(--main-bg-color-DARK-wALPHA);
+    color: var(--text-color-DARK);
+    border-radius: 0px;
+
+    flex-grow: 1;
+}
+
+
+.columnTop
+span {
+    text-align: left;
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.columnTop
+i {
+    vertical-align: middle;
+}
+
+/* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    /* position: relative; */
+    /* display: inline-block; */
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 36px;
+    background-color: var(--L2-surface-color-DARK);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-inline-start: 0px;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content li {
+    color: var(--text-color-DARK);
+    padding: 16px 16px;
+    text-decoration: none;
+    display: block; 
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content li:hover {
+      background-color: var(--L2-hover-color-DARK)
+    }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropBtn {
+    /* background-color: #3e8e41; */
+    background-color: var(--L2-hover-color-DARK);
+  }
 
 iframe {
     height: var(--iframe-height); 
     width: var(--phone-width-regular); 
     border: 0px; 
     overflow: no;
+    background-color: var(--main-bg-color);
 }
