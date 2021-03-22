@@ -236,5 +236,5 @@ iframe {
     width: var(--phone-width-regular); 
     border: 0px; 
     overflow: no;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color) !important;
 }
